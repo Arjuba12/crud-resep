@@ -1,0 +1,104 @@
+:root {
+    --primary: #4a90e2;
+    /* Soft Blue */
+    --secondary: #ffb347;
+    /* Soft Orange */
+    --text-light: #fff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--primary);
+    padding: 15px 20px;
+    color: var(--text-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hamburger menu */
+.hamburger {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background: var(--text-light);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Nav links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+.nav-links a:hover {
+    background: var(--secondary);
+}
+
+/* Sign In Button */
+.btn-signin {
+    background: var(--secondary);
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 8px 16px;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-signin:hover {
+    background: #ffa733;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        flex-direction: column;
+        width: 200px;
+        background: var(--primary);
+        padding: 20px;
+        gap: 15px;
+        transition: left 0.3s ease;
+        border-radius: 0 0 8px 0;
+    }
+
+    .nav-links.show {
+        left: 0;
+    }
+}

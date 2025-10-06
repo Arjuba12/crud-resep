@@ -1,0 +1,54 @@
+/* Navbar container */
+.navbar {
+    background-color: #ff6b35;
+    /* oranye cerah */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 12px 12px;
+    /* lebih lembut */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo atau judul navbar */
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Link navbar */
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover link */
+.navbar a:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    .navbar a {
+        margin: 8px 0 0 0;
+        font-size: 0.95rem;
+    }
+}
