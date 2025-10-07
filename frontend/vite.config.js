@@ -1,13 +1,15 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react({
-      babel: {
-        plugins: [['babel-plugin-react-compiler']],
-      },
-    }),
-  ],
-})
+  plugins: [react()],
+  server: {
+    host: true, // supaya bisa diakses dari network/public URL
+    port: 5173, // sesuai port dev server kamu
+    allowedHosts: [
+      "localhost",
+      "127.0.0.1",
+      "unpresiding-encephalic-dawn.ngrok-free.dev", // tambahkan host ngrok-mu
+    ],
+  },
+});

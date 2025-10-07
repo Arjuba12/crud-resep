@@ -95,14 +95,26 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.recipe-table {
-    width: 100%;
-    border-collapse: collapse;
+
+.recipe-table th {
+    padding: 1.2rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .recipe-table thead {
     background: linear-gradient(135deg, #a3bffa 0%, #c3dafe 100%);
-    color: #1f2937;
+    color: #000;
+    /* 🟢 Tambahan: teks header tabel jadi hitam */
+}
+
+td {
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+    padding: 12px 15px;
 }
 
 .recipe-table th {
@@ -125,8 +137,11 @@
 }
 
 .recipe-table td {
-    padding: 1rem;
-    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+    padding: 12px 15px;
+    color: #000;
+    /* 🟢 Tambahan: teks isi tabel jadi hitam */
 }
 
 /* Recipe Thumbnail */
